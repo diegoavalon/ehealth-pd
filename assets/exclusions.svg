@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="271px" height="310px" viewBox="0 0 271 310" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>exclusions</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="exclusions">
+            <g id="file">
+                <path d="M19.658,0 L183.888,0 L270.937,86.711 L270.937,289.938 C270.937,300.617 262.278,309.267 251.608,309.267 L19.658,309.267 C8.988,309.267 0.329,300.617 0.329,289.938 L0.329,19.329 C0.329,8.65 8.989,0 19.658,0 Z" id="Path" fill="#BBBBE1"></path>
+                <path d="M270.658,86.981 L203.286,86.981 C192.616,86.981 183.957,78.322 183.957,67.652 L183.957,0.193 L270.658,86.981 Z" id="Path" fill="#5857B5"></path>
+            </g>
+            <text id="Exclusions-&amp;-Limitat" font-family="DINCondensed-Bold, DIN Condensed" font-size="48" font-style="condensed" font-weight="bold" line-spacing="52" fill="#5857B5">
+                <tspan x="40.676" y="138">Exclusions &amp;</tspan>
+                <tspan x="53.684" y="190">Limitations</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

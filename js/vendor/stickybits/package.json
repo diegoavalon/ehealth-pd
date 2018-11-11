@@ -1,0 +1,130 @@
+{
+  "_from": "stickybits",
+  "_id": "stickybits@3.5.7",
+  "_inBundle": false,
+  "_integrity": "sha512-OuMX6fenpATvNYwem/oK+ifkz7fnY6CuGwJpY9YTc5tPRY/p01pny5IiVZ45klY34ew1VOHJPGiBu9QNsjDgNA==",
+  "_location": "/stickybits",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "stickybits",
+    "name": "stickybits",
+    "escapedName": "stickybits",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/stickybits/-/stickybits-3.5.7.tgz",
+  "_shasum": "20ab5c59aa2926c67330d5bab540fe28b80e602c",
+  "_spec": "stickybits",
+  "_where": "/Users/davalon/Projects/Work/ehealth-ui",
+  "author": {
+    "name": "Jeff Wainwright",
+    "email": "yowainwright@gmail.com",
+    "url": "https://jeffry.in"
+  },
+  "browserslist": [
+    "defaults",
+    "ie >= 9"
+  ],
+  "bugs": {
+    "url": "https://github.com/dollarshaveclub/stickybits/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Stickybits is a lightweight alternative to `position: sticky` polyfills",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.44",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.44",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.0.0",
+    "codecov": "^3.0.2",
+    "conventional-changelog-cli": "^2.0.0",
+    "es-check": "^4.0.0",
+    "eslint": "^5.0.0",
+    "eslint-config-dollarshaveclub": "^3.1.0",
+    "husky": "^1.0.0",
+    "jest": "^22.0.0",
+    "jquery": "^3.2.1",
+    "markdown-spellcheck": "^1.3.1",
+    "markdownlint-cli": "^0.13.0",
+    "node-qunit-phantomjs": "^2.0.0",
+    "nyc": "^12.0.1",
+    "qunit": "^2.6.1",
+    "rollup": "0.66.5",
+    "rollup-plugin-babel": "^4.0.0-beta.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-uglify": "^6.0.0",
+    "write-good": "^0.13.1"
+  },
+  "files": [
+    "dist",
+    "types",
+    "src"
+  ],
+  "homepage": "https://github.com/dollarshaveclub/stickybits#readme",
+  "jest": {
+    "testRegex": "./tests/unit/.*.js$"
+  },
+  "keywords": [
+    "stick",
+    "fixed",
+    "sticky",
+    "position",
+    "navigation",
+    "nav",
+    "dom",
+    "simple",
+    "javascript",
+    "stuck",
+    "waypoint",
+    "scroll",
+    "stickyheader",
+    "stickynavigation",
+    "fixedheader"
+  ],
+  "license": "MIT",
+  "main": "dist/stickybits.js",
+  "module": "dist/stickybits.es.js",
+  "name": "stickybits",
+  "repository": {
+    "url": "git+https://github.com/dollarshaveclub/stickybits.git",
+    "type": "git"
+  },
+  "scripts": {
+    "build": "npm run test:unit && npm run build:rollup",
+    "build:rollup": "rollup --config configs/rollup.config.js",
+    "chore": "npm run chore:delete-changelog-branch && npm run chore:branch && npm run chore:changelog && npm run chore:pr && npm run chore:setup-next-work",
+    "chore:branch": "git checkout -b chore-changelog",
+    "chore:changelog": "conventional-changelog -p eslint -i CHANGELOG.md -s -r 0",
+    "chore:delete-changelog-branch": "if git show-ref --quiet refs/heads/chore-changelog; then git branch -D chore-changelog; fi",
+    "chore:pr": "git add . && git commit -m '[chore] updates changelog' --no-verify && git push origin chore-changelog -f",
+    "chore:setup-changelog": "git checkout master && git pull",
+    "chore:setup-next-work": "git checkout master && npm run chore:delete-changelog-branch",
+    "grammar": "write-good *.md --no-passive",
+    "lint": "eslint . --fix",
+    "lint:ci": "eslint .",
+    "markdownlint": "markdownlint *.md",
+    "postpublish": "git tag $npm_package_version && git push origin --tags && npm run chore",
+    "pre-commit-msg": "Echo 'Running pre-commit checks...' && exit 0",
+    "prepush": "npm run build && npm test",
+    "release": "npm run lint && npm run build && npm test && npm run report:coverage",
+    "report:coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
+    "spelling": "mdspell '**/*.md' '!**/node_modules/**/*.md' --ignore-numbers",
+    "spelling:ci": "mdspell '**/*.md' '!**/node_modules/**/*.md' --ignore-numbers --report",
+    "start": "npm i",
+    "test": "npm run markdownlint && npm run test:unit && npm run test:acceptance",
+    "test:acceptance": "node ./scripts/acceptance.js --coverage",
+    "test:es-check": "es-check es5 dist/stickybits.min.js dist/stickybits.js dist/jquery.stickybits.js dist/jquery.stickybits.min.js dist/umbrella.stickybits.js dist/umbrella.stickybits.min.js",
+    "test:unit": "jest --coverage"
+  },
+  "types": "types/index.d.ts",
+  "unpkg": "dist/stickybits.min.js",
+  "version": "3.5.7"
+}

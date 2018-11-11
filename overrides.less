@@ -1,0 +1,40 @@
+@import '../styles/main.less';
+
+// Mock
+.mock-header,
+.mock-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid @grey;
+    height: 62px;
+    width: 100%;
+    background: @white;
+    .h3();
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: @grey;
+    z-index: 10;
+    overflow: hidden;
+    @media screen and (min-width: @tablet) {
+        height: 74px;
+    }
+}
+
+.mock-footer {
+    height: 546px;
+    border: none;
+    border-top: 1px solid @grey;
+    @media screen and (min-width: @tablet) {
+        height: 400px;
+    }
+}
+
+// Canvas
+.section__text {
+    .bodySmall();
+}
+
+.pd-disclaimer {
+    .h5();
+}

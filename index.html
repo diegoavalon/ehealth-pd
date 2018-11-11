@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>Detail Page</title>
+    <link rel="stylesheet" href="overrides.css">
+    <style>
+        .modal__close {
+            width: 16px;
+            height: 16px;
+        }
+        .modal-section {
+            padding: 40px;
+        }
+        @media screen and (min-width: 760px) {
+            .modal__close {
+                width: 20px;
+                height: 20px;
+            }
+            .modal-section {
+                padding: 60px;
+            }
+        }
+        @media screen and (min-width: 1140px) {
+            .modal__close {
+                width: 20px;
+                height: 20px;
+            }
+            .modal-section {
+                padding: 60px 100px;
+            }
+        }
+    </style>
+
+    <script src="https://unpkg.com/@webcomponents/custom-elements"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.1/web-animations.min.js"></script>
+</head>
+
+<body>
+    <header class="mock-header">Header</header>
+
+    <pd-plan>
+        <pd-header></pd-header>
+        <pd-body></pd-body>
+        <pd-additional-coverage></pd-additional-coverage>
+        <pd-resources></pd-resources>
+    </pd-plan>
+
+    <footer class="mock-footer">Footer</footer>
+
+    <eh-toast></eh-toast>
+    
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
+
